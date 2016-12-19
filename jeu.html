@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta charset="utf-8"/>
+		<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+		<title>Jeu</title>
+	</head>
+			
+	<body id="pagejeu">
+
+		<audio src="musique.mp3" ; autoplay ; repeat >
+			<p>If you are reading this, it is because your browser does not support the audio element.     </p>
+		</audio>
+
+		<div class="haut">
+			<div id="vies">
+				<div class="vie" id="vie1"><img class="imgvie"  src="images/vie.png"></div>
+				<div class="vie" id="vie2"><img class="imgvie" src="images/vie.png"></div>
+				<div class="vie" id="vie3"><img class="imgvie"  src="images/vie.png"></div>
+			</div>
+			<div id="scorejeu">
+				<p class="scorenom"><strong>SCORE :</strong></p>
+				<p class="scorechiffre" id="scorechiffre"> </p>
+			</div>		
+		</div>
+
+
+		<div class="perso" id="divzombie"><img id="zombie" src="images/zombie-walk1.png"></div>
+
+
+		<div class="sol" id="monde">
+
+			<section class="obstacle" id="ob1"></section>
+	 		<section class="obstacle" id="ob2"></section>
+			<section class="obstacle" id="ob3"></section>
+			<section class="obstacle" id="ob4"></section>
+			<section class="obstacle" id="ob5"></section>
+			<section class="obstacle" id="ob6"></section>
+			<section class="obstacle" id="ob7"></section>
+			<section class="obstacle" id="ob8"></section>
+			<section class="obstacle" id="ob9"></section> 
+		 
+			<img id="bus" src="images/bus.png">
+			<img id="busv" src="images/busv.png">
+
+			<section class="platf" id="section1"></section>
+			<section class="platf" id="section2"></section>
+			<section class="platf" id="section3"></section>
+			<section class="platf" id="section4"></section>
+			<section class="platf" id="section5"></section>
+			<section class="platf" id="section6"></section>
+			<section class="platf" id="section7"></section>
+
+
+		</div>
+
+		<script src ="js.js" type="text/javascript"></script>
+	</body>
+
+
+</html>

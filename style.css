@@ -1,0 +1,313 @@
+/*         ---------------------------------------------------       PAGE ACCEUIL ------------------------          */
+
+#pageacceuil { 
+	color:white;
+	background: url(images/debut.png) no-repeat center fixed;
+	background-attachment: fixed;
+	font-family: "Orbitron";
+	margin:0;
+	padding:0;
+	-webkit-background-size: cover;
+}
+#pageacceuil h1 { 
+	font-family:Helvetica;
+ 	color: white;
+ 	text-align:center;
+ 	font-family: "Orbitron";
+ 	margin-bottom: 10%
+}
+#pageacceuil #description{
+	color: black;
+ 	font-weight: bolder;
+ 	text-align:center;
+ 	margin : auto ;
+ 	position:relative;
+ 	top:55px;
+ 	font-size:140%;
+}
+#pageacceuil #controle { 
+	color: white;
+ 	border-style:solid;
+ 	border-color:white;
+ 	border-width:3px;
+ 	border-top-left-radius: 30px;
+ 	width:300px;
+	display: block;
+ 	margin:auto;
+ 	position: relative;
+ 	top:100px;
+ 	text-align: center;
+}
+#pageacceuil #bouttonjouer {
+	display:block;
+	margin:auto;
+	margin-top:200px;
+	width: 300px;
+	height:40px;
+	border-radius:30px;
+	background-color:lightgrey;
+	font-family: "Orbitron";
+}
+#pageacceuil #lienjeu {
+	text-decoration: none;
+ 	color: black;
+}
+
+/*    ---------------------------------------------------------        PAGE JEU   1       ---------------------------------      */
+
+#pagejeu .vie {
+	display:inline;
+	visibility: visible ;
+}
+.scorenom {
+ font-family:"Orbitron";
+}
+#vies {
+	position:fixed;
+}
+#pagejeu img.imgvie {
+
+	width: 42px;
+}
+#pagejeu {
+	background-color:#3a2009;
+/*	width: 200px;*/
+	margin:0;
+	overflow: hidden;
+}
+#pagejeu #zombie {
+	width: 70px;
+	position:absolute;
+	top:550px;
+	left:160px;
+	transition : 0.5s all ease ;
+	z-index: 800 ; 
+}
+.sol {
+	width: 20000px;
+	position: absolute ; 
+}
+.platf {
+
+	display:inline-block;
+}
+.sol #section1, #section3, #section5, #section7 {
+	background-image:url(images/sol.png);
+	width: 1500px;
+	height: 1000px;
+}
+.sol #section2, #section4 {
+	background-image:url(images/truc.png);
+	width: 200px;
+	height: 1000px;
+}
+
+.sol #section6 {
+ background-color:transparent;
+ width: 200px;
+ height: 1000px;
+ position:absolute;
+ left:4650px;
+}
+
+.haut {
+	background-image:url(images/fond4.png);
+	width: 5000px;
+	height: 640px;
+	overflow: hidden;
+	position : relative ;
+}
+
+.sol .obstacle {
+	position : absolute ;
+	background-color: black ; 
+	z-index: 200 ; 
+	width : 4em ;
+	height: 4em ; 
+}
+.sol #ob1 {
+	left : 4%;
+	top : -20%;
+}
+.sol #ob2 {
+	left : 5.5%;
+	top : -23%;
+}
+.sol #ob3{	
+	left : 7%;
+	top : -26%;
+}
+.sol #ob4{	
+	left : 11%;
+	top : -25%;
+} 
+.sol #ob5{	
+	left : 12.5%;
+	top : -23%;
+}
+.sol #ob6{
+	left : 14%;
+	top : -21%;
+}
+.sol #ob7{
+	left : 14.5%;
+	top : -22%;
+}
+.sol #ob8{
+	left : 18%;
+	top : -24%;
+}
+.sol #ob9{
+	left : 19%;
+	top : -20%;
+}
+
+#pagejeu #scorejeu { 
+	margin-left: 1360px;
+   border-style: solid;
+   border-color:dodgerblue;
+   border-width:3px;
+   border-top-left-radius: 30px;
+   border-bottom-right-radius: 30px;
+   width:85px;
+   text-align: center;
+   color:midnightblue;
+}
+#pagejeu #bus {
+	position:absolute;
+	bottom:910px;
+	left: 3900px;
+}
+
+#scorechiffre{ 
+
+	font-size: 18px;
+}
+#pagejeu #bus {
+	position:absolute;
+	bottom: 61em;
+	left: 20%;
+}
+#pagejeu #busv {
+	visibility: hidden;
+	position:absolute;
+	bottom: 61em;
+	left: 20%;
+}
+#pagejeu .yep {
+animation-duration: 2s;
+animation-name: bye;
+}
+	@keyframes bye {
+	from { 
+	}
+	to {
+	margin-left: +500px;
+	}
+	}
+
+/*    ---------------------------------                DERNIERE PAGE             ----------------------        */
+
+#pagefin { 
+	color:white;
+	background: url(images/fin.png) no-repeat center fixed;
+	background-attachment: fixed;
+	margin:0;
+	padding:0;
+	-webkit-background-size: cover;
+}
+#pagefin #scoretotal {   
+	color: white;
+	text-align:center;
+	margin-top:180px;
+	font-size: 30px;
+}
+#scorechiffre{ 
+
+	font-size: 18px;
+}
+#score { 
+	text-align: center;
+	font-size: 40px;
+	font-family: "Orbitron";
+}
+#pagefin #buttons { 
+	color: white;
+	position:relative;
+	top:150px;
+	text-align: center;
+}
+#pagefin #bouttonQuitter{ 
+	width: 100px;
+	height: 40px;
+	text-decoration: none;
+	color: white;
+	border-radius: 50px;
+	background-color: firebrick;
+	font-family: "Orbitron";
+}
+#pagefin #bouttonRejouer {  
+	width: 100px;
+	height: 40px;
+	text-decoration: none;
+	color: white;
+	border-radius: 50px;
+	background-color: #05989a;
+	font-family: "Orbitron";
+}
+#pagefin #textefin {
+	color:white;
+	border-style:solid;
+	border-width: 1%;
+	border-bottom-left-radius: 3em;
+	border-bottom-right-radius: 3em;
+	position: relative;
+	top: 300px;
+	left: 23.5%;
+	width: 55%;
+	text-align: center;
+	font-size: 120%;
+	font-family: "Orbitron";
+}
+#pagefin #lienreco {
+	text-decoration: none;
+	color: white;
+}
+#pagefin #lienmario {
+	text-decoration: none;
+	color: white;
+}
+
+
+
+@media all and (min-width: 720px) and (max-width: 1470px)
+ 
+{ #pagejeu #zombie { width:65px;
+   
+ }
+
+ #pagejeu img.imgvie { width: 40px;}
+ 
+
+ .haut { height:39.6em;}
+ 
+#pagejeu #scorejeu { margin-left : 50em ;}
+}
+
+
+@media all and (min-width: 200px) and (max-width: 720px)
+
+
+{ #pagejeu #zombie { width:45px;
+   
+ }
+ 
+ #pagejeu img.imgvie { width: 35px;}
+ 
+ 
+
+
+ .haut { height:37.8em;}
+ 
+#pagejeu #scorejeu { margin-left:10em;}
+}
