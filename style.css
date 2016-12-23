@@ -161,6 +161,17 @@
 	left : 19%;
 	top : -20%;
 }
+.sol .ennemi {
+	position : absolute ;
+	background-color: green ; 
+	z-index: 200 ; 
+	width : 4em ;
+	height: 4em ; 
+}
+.sol #en1 {
+	left : 10%;
+	top : -15%;
+}
 
 #pagejeu #scorejeu { 
 	margin-left: 1360px;
@@ -178,7 +189,6 @@
 	bottom:910px;
 	left: 3900px;
 }
-
 #scorechiffre{ 
 
 	font-size: 18px;
