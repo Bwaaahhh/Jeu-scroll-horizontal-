@@ -30,7 +30,6 @@ document.getElementById("scorechiffre").innerHTML = score ;								// Permet de 
 function getpos(monid) {
 	return monid.getBoundingClientRect();												// Racourci pour ne pas avoir a écrire a chaque fois le getBounding
 }
-console.log(getpos(idbusv))
 
 var posdepart = getpos(idmonde).left= 0 ;												// Position de départ pour le retour a la vie
 
@@ -42,15 +41,17 @@ var moveLeft = false;
 var moveRight = false;
 
 setInterval(function(){
-    if(moveLeft === true && tomber === false){											// Permet le mouvement en changeant la position de la div du sol. C'est le sol qui bouge 
+	var depart = getpos(idmonde).left;
+
+    if(moveLeft === true && tomber === false && depart <= 0 ){											// Permet le mouvement en changeant la position de la div du sol. C'est le sol qui bouge 
         var posmonde = getpos(idmonde) ;												// et non le zombie
         var gauche = posmonde.left+20 ;
         idmonde.style.left = gauche+"px" ;
         changementImage() ;	
         calculColisionTop()															// Appel des differentes fonctions lors du mouvement
-        calculColision() ;																// Changement de l'image, calcul de colision a chaque lancement de la fonction 
+        calculColision() ;															// Changement de l'image, calcul de colision a chaque lancement de la fonction 
         finDuNiveau() ;			
-        presque() ;														// Calcul de colision pour la fin du niveau
+        departBus() ;														// Calcul de colision pour la fin du niveau
     }
     else if(moveRight === true && tomber === false){
         var posmonde = getpos(idmonde) ;												// permet le mouvement dans l'autre sens 
@@ -63,7 +64,7 @@ setInterval(function(){
         calculColision() ;																// Appel de la fonction de calcul de points ( calculs des colisions )
         ajoutPoint() ;
         finDuNiveau() ;
-        presque();
+        departBus();
     }
 }, 50);
 
@@ -92,15 +93,15 @@ document.addEventListener("keydown", bouge, false);
 function bouge(e) {
 	var poszombie = getpos(idzombie) ; 												// Pour sauter + calcul de la position du zombie pour désactivé le saut si il est plus haut
 		if(e.code == "Space" && poszombie.top >=  545 ){
-			var poszombie = getpos(idzombie) ;										// que sa position de départ
+			var poszombie = getpos(idzombie);										// que sa position de départ
 			var haut = poszombie.top-100 ; 			
-			idzombie.style.top = haut+"px" ; 
-			changementImageSaut() ; 
-			calculColision() ; 	
+			idzombie.style.top = haut+"px"; 
+			changementImageSaut(); 
+			calculColision(); 	
 			setInterval(changerDeCouleur , 10) ; 													// Appel des fonctions nécessaire, colision etc etc
 			setInterval(calculColisionTop, 10);
 			setTimeout(calculColision, 800);										// Timeout pour calculer le bon moment de la colision du trou
-			setTimeout(reviens, 500) ;												// Timeout pour activer la fonction pour le retour du zombie au sol
+			setTimeout(reviens, 500);												// Timeout pour activer la fonction pour le retour du zombie au sol
 			setTimeout(changementImage, 600);										// Timeout pour le changement d'image de l'image du saut a limage de la marche
 		}
 	}
@@ -268,21 +269,14 @@ function changerDeCouleur(){																// Fonction pour que les div en haut
 	}
 }
 
-function presque() {																		// Fonction detection de position pour changement image bus 
+function departBus() {																		// Fonction detection de position pour changement image bus 
 	var posection5 = getpos(possection5) ;
 	var poszombie = getpos(idzombie) ;
     if (posection5.left <= poszombie.left + poszombie.width - 450 ) {
-        arriver();
-    }
-}
-function arriver() {
-    if (idbusv.style.visibility == "") {
+        if (idbusv.style.visibility == "") {
         idbusv.style.visibility = "visible";
         idbus.style.visibility = "hidden" ;
         idbusv.className +="yep" ; 
+    	}
     }
 }
-
-
-
-
